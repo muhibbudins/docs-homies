@@ -848,3 +848,67 @@ Terakhir untuk menampilkan map silahkan buat API_KEY pada link berikut ... lalu 
 		}
     </script>
 ```
+
+# Update
+
+## Merapihkan Overlapping Element
+
+Pada beberapa bagian saya menambahkan tulisan overlay "TESTIMONY" & "PROJECTS" yang menjadi bug (overlapping element), jadi solusinya silahkan buka file **style.scss** dan replace bagian `:before` pada bagian testimony & projects menjadi berikut :
+
+Bagian Testimony
+
+```scss
+	&:before {
+		content: 'TESTIMONY';
+		font-family: $oswald;
+		letter-spacing: 20px;
+		font-size: 164px;
+		position: absolute;
+		transform: translateX(60%) translatey(60%) rotate(-90deg);
+		color: transparentize($black, 0.85);
+
+		@media (max-width: 1024px) {
+			content: '';
+		}
+	}
+```
+
+Bagian Projects
+
+```scss
+	&:before {
+		content: 'PROJECTS';
+		font-family: $oswald;
+		letter-spacing: 20px;
+		font-size: 164px;
+		position: absolute;
+		transform: translateX(10%);
+		color: transparentize($black, 0.85);
+		bottom: -4%;
+
+		@media (max-width: 1024px) {
+			content: '';
+		}
+	}
+```
+
+## Merapihkan Tulisan bagian Hero
+
+Di bagian hero jika di buka pada browser mobile akan terlihat kurang rapi, maka dari itu silahkan tambahkan code berikut setelah `.btn` pada bagian **Hero** :
+
+```scss
+	@media (max-width: 1024px) {
+		background: transparent;  /* fallback for old browsers */
+		background: -webkit-linear-gradient(to top, transparentize(white, 0.1), transparentize(white, 0.4));  /* Chrome 10-25, Safari 5.1-6 */
+		background: linear-gradient(to top, transparentize(white, 0.1), transparentize(white, 0.4)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		text-align: center;
+
+		&-title {
+			font-size: 48px;
+		}
+	}
+```
+
+## Merapihkan Columns
+
+For your information column pada Spectre.css tidak otomatis responsive, maka kita set manual dengan menambahkan class responsive seperti `col-xs-[1-12], col-sm-[1-12], col-md-[1-12], col-lg-[1-12], col-xl-[1-12]` pada bagian `column col-*`. Silahkan lihat file [index.html](https://github.com/muhibbudins/homies/blob/master/index.html) berikut untuk lebih jelasnya.
