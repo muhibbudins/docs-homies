@@ -2,7 +2,7 @@
 
 ## Pendahuluan
 
-> Sebelum memulai ada baiknya kalian mempersiapkan beberapa tools yang akan kita gunakan dan bisa kalian baca pada bagian [README.md](README.md)
+> Sebelum memulai ada baiknya kalian mempersiapkan beberapa tools yang akan kita gunakan dan bisa kalian baca pada bagian [README.md](https://github.com/muhibbudins/homies/blob/master/README.md)
 
 Apa sih template? apa pernah menggunakan HTML template? bagaimana cara membuatnya? seperti apakah kesulitan membuatnya?
 
@@ -30,7 +30,7 @@ Sebetulnya masih banyak yang menjadi sarat menjadi web designer yang sebetulnya 
 
 Beberapa hari yang lalu saya telah membuat desain landing page sebagai contoh untuk agensi desain rumah, bentuknya seperti ini :
 
-![Desain](img/full.jpg)
+![Desain](https://muhibbudins.github.io/homies/img/full.jpg)
 
 Selanjutnya dalam pembuatan template ini saya telah melakukan slicing assets dari desain tersebut dan kalian bisa clone / download dari repository yang saya telah siapkan disini https://github.com/muhibbudins/homies atau bisa langsung clone dengan command `git clone git@github.com:muhibbudins/homies.git`
 
@@ -848,5 +848,3 @@ Terakhir untuk menampilkan map silahkan buat API_KEY pada link berikut ... lalu 
 		}
     </script>
 ```
-
-### The End
